@@ -10,15 +10,42 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="input_action">
+    <section class="header">
+        <div class="input">
             <img src="https://cdn-icons-png.flaticon.com/512/3031/3031267.png" id="input_icon">
             <form>
                 <input type="text" name="action" id="action">
             </form>
             <img src="https://cdn-icons-png.flaticon.com/512/3416/3416075.png" id="input_add">
         </div>
-    </div>
+
+        <div>
+            <li>
+                <ul>Complete all tasks</ul>
+                <ul>Clear completed</ul>
+            </li>
+        </div>
+    </section>
+
+    <section class="main">
+        <input type="radio" id="task" name="tasks" value="task">
+        <label>Learn how to use vue.js</label>
+        <input type="radio" id="task" name="tasks" value="task">
+        <label>Drink coffee</label>
+        <input type="radio" id="task" name="tasks" value="task">
+        <label>vuejsexamples.com</label>
+    </section>
+
+    <section class="footer">
+        <div>3 tasks left</div>
+        <div>
+            <li>
+                <ul>All</ul>
+                <ul>Incomplete</ul>
+                <ul>Completed</ul>
+            </li>
+        </div>
+    </section>
 </body>
 
 </html>
