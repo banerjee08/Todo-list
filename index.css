@@ -1,31 +1,136 @@
-body{
-    width: 500px;
-    margin: 0 auto;
-    border: 1px solid blue;
-    border-radius: 10px;
-    padding: 15px;
-
-    
-}
-.header{
-    /* background-color: red; */
-    margin: 0 auto;
-    width: 500px;
+body {
+  width: 500px;
+  margin: 0 auto;
+  border-radius: 10px;
+  padding: 15px;
+  -webkit-box-shadow: 0px 0px 15px 4px rgba(0, 0, 0, 0.26);
+  -moz-box-shadow: 0px 0px 15px 4px rgba(0, 0, 0, 0.26);
+  box-shadow: 0px 0px 15px 4px rgba(0, 0, 0, 0.26);
+  font-family: 'Roboto', sans-serif;
 }
 
-.input{
-    display: flex;
-    justify-content: space-between;
+/* typography */
+.actions{
+    color: #888888
 }
 
-#input_icon,
-#input_add{ 
-    width: 30px;
-    height: 30px;
+.header {
+  margin: 0 auto;
+  width: 500px;
+}
+
+.input_action {
+  display: flex;
+  justify-content: space-between;
+  background-color: Gainsboro;
+  border-radius: 10px;
+  padding: 10px 15px;
+}
+
+.input_action:hover {
+  background-color: DarkGray;
+}
+
+/* icons */
+
+.input_icon,
+.input_add {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  align-self: center;
+}
+
+.double_tick{
+    width: 20px;
+    height: 20px;
     object-fit: contain;
+    align-self: center;
 }
 
-input{
-    width: 380px;
-    height: 30px;
+.delete-btn{
+    width: 15px;
+    height: 15px;
+    object-fit: contain;
+    align-self: center;
+    border: 1px solid #303030;
+    border-radius: 50%;
+    padding: 3px
+}
+
+/* hide the add button */
+/* .input_add:disabled{
+    
+} */
+
+.double_tick {
+  padding-right: 6px;
+}
+
+.add_task {
+  width: 380px;
+  height: 30px;
+  border: none;
+  background-color: Gainsboro;
+}
+
+.add_task:hover {
+  background-color: DarkGray;
+}
+
+.delete-btn{
+    margin-left: auto;
+}
+
+.actions {
+  display: flex;
+  padding: 0 15px;
+  
+}
+
+.action_btns {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  
+}
+
+/* list styling */
+li {
+  list-style-type: none;
+}
+
+ul{
+    padding: 0;
+}
+
+.incomplete,
+.completed{
+    display: flex;
+    flex-direction: column;
+    /* background-color:lightblue; */
+    padding: 5px 10px;
+}
+
+.task{
+    display: flex;
+    /* background-color:yellow; */
+    padding: 10px 10px 10px 5px;
+    margin: 0;
+    font-size: 20px;
+    gap: 8px;
+}
+
+.footer{
+    /* border-top: 1px solid #989898 */
+}
+
+/* .input-radio{
+    align-self: center;
+} */
+
+.border-bottom{
+    border-bottom: 1px solid #989898
 }
