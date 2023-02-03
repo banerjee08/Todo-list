@@ -1,0 +1,29 @@
+.container{
+    /* max-width: 400px; */
+    /* display: inline-block; */
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    /* background-color: red; */
+    margin: 0 auto;
+    width: 500px;
+}
+
+.input_action{
+    display: flex;
+    /* max-width: 200px; */
+    /* background-color: blue; */
+    justify-content: space-between;
+    /* margin: 0 auto; */
+}
+
+#input_icon,
+#input_add{ 
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+input{
+    width: 380px;
+    height: 40px;
+}
