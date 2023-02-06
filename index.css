@@ -10,13 +10,13 @@ body {
 }
 
 /* typography */
-.text-light{
-    color: #888888
+.text-light {
+  color: #888888;
 }
 
-.text-highlight{
-    font-weight: bold;
-    color: black
+.text-highlight {
+  font-weight: bold;
+  color: black;
 }
 
 .header {
@@ -46,21 +46,26 @@ body {
   align-self: center;
 }
 
-.double_tick{
-    width: 20px;
-    height: 20px;
-    object-fit: contain;
-    align-self: center;
+.double_tick {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  align-self: center;
 }
 
-.delete-btn{
-    width: 15px;
-    height: 15px;
-    object-fit: contain;
-    align-self: center;
-    border: 1px solid #303030;
-    border-radius: 50%;
-    padding: 3px
+.delete-btn {
+  width: 15px;
+  height: 15px;
+  object-fit: contain;
+  align-self: center;
+  border: 1px solid #303030;
+  border-radius: 50%;
+  padding: 3px;
+  margin-left: auto;
+}
+
+.btn-light{
+  border: 1px solid whitesmoke;
 }
 
 /* hide the add button */
@@ -83,72 +88,73 @@ body {
   background-color: DarkGray;
 }
 
-.delete-btn{
-    margin-left: auto;
-}
-
 .actions {
   display: flex;
   padding: 0 15px;
-  
 }
 
-.action_btns {
+.action-btns {
   display: flex;
   justify-content: space-between;
   width: 100%;
   margin: 0;
   padding: 0;
-  
 }
+
+/* .action-btns:hover,
+.action-btns:active {
+  color: #383838;
+} */
 
 /* list styling */
 li {
   list-style-type: none;
 }
 
-ul{
-    padding: 0;
+ul {
+  padding: 0;
 }
 
 .incomplete,
-.completed{
-    display: flex;
-    flex-direction: column;
-    /* background-color:lightblue; */
-    padding: 5px 10px;
+.completed {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 10px;
 }
 
-.task{
-    display: flex;
-    /* background-color:yellow; */
-    padding: 10px 10px 10px 5px;
-    margin: 0;
-    font-size: 20px;
-    gap: 8px;
+.task {
+  display: flex;
+  padding: 10px 10px 10px 5px;
+  margin: 0;
+  font-size: 20px;
+  gap: 8px;
 }
 
-.footer{
-    display: flex;
-    /* background-color: lightblue; */
-    padding: 5px 23px;
+.task-complete{
+  background: #383838;
+  color: whitesmoke;
+  border-radius: 5px;
+  margin-bottom: 5px;
 }
 
-.status{
-    margin-left: auto;
-    
-
+.footer {
+  display: flex;
+  padding: 5px 23px;
 }
 
-.task_status{
-    display: flex;
-    gap: 15px;
+.status {
+  margin-left: auto;
 }
 
-.task_counter{
-    align-self: center;
+.task_status {
+  display: flex;
+  gap: 15px;
 }
 
-.border-bottom{
-    border-bottom: 1px solid #989898
+.task_counter {
+  align-self: center;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #989898;
 }
