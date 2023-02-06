@@ -24,7 +24,7 @@ body {
   width: 500px;
 }
 
-.input_action {
+.input-action {
   display: flex;
   justify-content: space-between;
   background-color: Gainsboro;
@@ -32,21 +32,21 @@ body {
   padding: 10px 15px;
 }
 
-.input_action:hover {
+.input-action:hover {
   background-color: DarkGray;
 }
 
 /* icons */
 
-.input_icon,
-.input_add {
+.input-icon,
+.input-add {
   width: 30px;
   height: 30px;
   object-fit: contain;
   align-self: center;
 }
 
-.double_tick {
+.double-tick {
   width: 20px;
   height: 20px;
   object-fit: contain;
@@ -69,28 +69,28 @@ body {
 }
 
 /* hide the add button */
-/* .input_add:disabled{
+/* .input-add:disabled{
     
 } */
 
-.double_tick {
+.double-tick {
   padding-right: 6px;
 }
 
-.add_task {
+.add-task {
   width: 380px;
   height: 30px;
   border: none;
   background-color: Gainsboro;
 }
 
-.add_task:hover {
+.add-task:hover {
   background-color: DarkGray;
 }
 
 .actions {
   display: flex;
-  padding: 0 15px;
+  padding: 10px 15px;
 }
 
 .action-btns {
@@ -146,12 +146,12 @@ ul {
   margin-left: auto;
 }
 
-.task_status {
+.task-status {
   display: flex;
   gap: 15px;
 }
 
-.task_counter {
+.task-counter {
   align-self: center;
 }
 

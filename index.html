@@ -14,41 +14,41 @@
 
 <body>
     <section class="header">
-        <div class="input_action">
-            <img src="https://cdn-icons-png.flaticon.com/512/3031/3031267.png" id="input_icon" class="input_icon">
+        <div class="input-action">
+            <img src="https://cdn-icons-png.flaticon.com/512/3031/3031267.png" id="input-icon" class="input-icon">
             <form>
-                <input type="text" name="add_task" id="add_task" class="add_task">
+                <input type="text" name="add-task" id="add-task" class="add-task">
             </form>
-            <img src="https://cdn-icons-png.flaticon.com/512/3416/3416075.png" id="input_add" class="input_add">
+            <img src="https://cdn-icons-png.flaticon.com/512/3416/3416075.png" id="input-add" class="input-add">
         </div>
 
         <div class="actions border-bottom text-light">
-            <img src="https://img.icons8.com/ios-filled/512/double-tick.png" id="double_tick" class="double_tick">
-            <li class="action-btns">
-                <ul>Complete all tasks</ul>
-                <ul>Clear completed</ul>
-            </li>
+            <img src="https://img.icons8.com/ios-filled/512/double-tick.png" id="double-tick" class="double-tick">
+            <div class="action-btns">
+                <p id="complete-all">Complete all tasks</p>
+                <p id="clear-completed">Clear completed</p>
+            </div>
         </div>
     </section>
 
     <section class="main">
-        <div class="incomplete border-bottom">
-            <div class="task">
+        <div class="incomplete border-bottom" id="incomplete">
+            <!-- <div class="task">
                 <input type="radio" id="task" name="task" value="task" class="input-radio">
                 <label>Learn how to use vue.</label>
-                <img src="https://img.icons8.com/ios-glyphs/512/multiply.png" class="delete-btn">
+                <img src="https://img.icons8.com/ios-glyphs/512/multiply.png" class="delete-btn" id="delete-btn">
             </div>
             <div class="task">
                 <input type="radio" id="task" name="task" value="task" class="input-radio">
                 <label>Learn how to use vue.</label>
-                <img src="https://img.icons8.com/ios-glyphs/512/multiply.png" class="delete-btn">
+                <img src="https://img.icons8.com/ios-glyphs/512/multiply.png" class="delete-btn" id="delete-btn">
             </div>
             <div class="task">
                 <input type="radio" id="task" name="task" value="task" class="input-radio">
                 <label>Learn how to use vue.</label>
-                <img src="https://img.icons8.com/ios-glyphs/512/multiply.png" class="delete-btn">
-            </div>
-            
+                <img src="https://img.icons8.com/ios-glyphs/512/multiply.png" class="delete-btn" id="delete-btn">
+            </div> -->
+
         </div>
 
         <div class="completed border-bottom">
@@ -56,32 +56,34 @@
             <div class="task task-complete">
                 <input type="radio" id="task" name="task" value="task" class="input-radio">
                 <label>Learn how to use vue.</label>
-                <img src="./img/delete-icon.png" class="delete-btn btn-light">
+                <img src="./img/delete-icon.png" class="delete-btn btn-light" id="delete-btn">
             </div>
             <div class="task task-complete">
                 <input type="radio" id="task" name="task" value="task" class="input-radio">
                 <label>Learn how to use vue.</label>
-                <img src="./img/delete-icon.png" class="delete-btn btn-light">
+                <img src="./img/delete-icon.png" class="delete-btn btn-light" id="delete-btn">
             </div>
             <div class="task task-complete">
                 <input type="radio" id="task" name="task" value="task" class="input-radio">
                 <label>Learn how to use vue.</label>
-                <img src="./img/delete-icon.png" class="delete-btn btn-light">
+                <img src="./img/delete-icon.png" class="delete-btn btn-light" id="delete-btn">
             </div>
-            
+
         </div>
     </section>
 
     <section class="footer text-light">
-        <div class="task_counter"><span class="text-highlight">3</span> tasks left</div>
+        <div class="task-counter"><span class="text-highlight">3</span> tasks left</div>
         <div class="status">
-            <li class="task_status">
-                <ul class="text-highlight">All</ul>
-                <ul>Incomplete</ul>
-                <ul>Completed</ul>
-            </li>
+            <ul class="task-status">
+                <li class="text-highlight">All</li>
+                <li>Incomplete</li>
+                <li>Completed</li>
+            </ul>
         </div>
     </section>
+
+    <script src="./index.js"></script>
 </body>
 
 </html>
