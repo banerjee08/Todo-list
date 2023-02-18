@@ -1,8 +1,8 @@
 const inputAdd = document.getElementById('input-add');
+const addTask = document.getElementById('add-task');
 const completeAll = document.getElementById('complete-all');
 const clearCompleted = document.getElementById('clear-completed');
 const deleteBtn = document.getElementById('delete-btn');
-const addTask = document.getElementById('add-task');
 const incomplete = document.getElementById('incomplete');
 const completed = document.getElementById('completed');
 
@@ -12,22 +12,20 @@ const myTasks = [];
 inputAdd.addEventListener('click', function () {
   myTasks.push(addTask.value);
   console.log(myTasks);
+  renderTasks();
+});
 
-  for (i = 0; i < myTasks.length; i++) {
-    `
+function renderTasks() {
+  let listItems = '';
+
+  for (let task of myTasks) {
+    listItems += `
     <div class="task">
     <input type="radio" id="task" name="task" value="task" class="input-radio">
-    <label for="task">${myTasks[i]}</label>
+    <label>${task}</label>
     <img src="https://img.icons8.com/ios-glyphs/512/multiply.png" class="delete-btn" id="delete-btn">
     </div>
     `;
   }
-  incomplete.innerHTML += myTasks;
-  // console.log(myTasks);
-});
-
-// const incompleteTasks = [];
-
-// incomplete.addEventListener('click', function (e) {
-
-// });
+  incomplete.innerHTML = listItems;
+}
