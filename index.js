@@ -5,6 +5,7 @@ const clearCompleted = document.getElementById('clear-completed');
 const deleteBtn = document.getElementById('delete-btn');
 const incomplete = document.getElementById('incomplete');
 const completed = document.getElementById('completed');
+const taskCounter = document.getElementById('task-counter');
 
 // array
 const myTasks = [];
@@ -13,6 +14,7 @@ inputAdd.addEventListener('click', function () {
   myTasks.push(addTask.value);
   addTask.value = '';
   renderTasks();
+  taskCount();
 });
 
 function renderTasks() {
@@ -28,4 +30,11 @@ function renderTasks() {
     `;
   }
   incomplete.innerHTML = listItems;
+}
+
+// tasks left
+function taskCount() {
+  taskCounter.innerHTML = `
+  <span class="text-highlight" >${myTasks.length}</span> tasks left
+  `;
 }
