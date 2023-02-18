@@ -11,7 +11,7 @@ const myTasks = [];
 
 inputAdd.addEventListener('click', function () {
   myTasks.push(addTask.value);
-  console.log(myTasks);
+  addTask.value = '';
   renderTasks();
 });
 
