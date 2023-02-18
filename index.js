@@ -19,16 +19,19 @@ inputAdd.addEventListener('click', function () {
 
 function renderTasks() {
   let listItems = '';
-
+  
+  let count = 1;
   for (let task of myTasks) {
     listItems += `
     <div class="task">
-    <input type="radio" id="task" name="task" value="task" class="input-radio">
-    <label>${task}</label>
+    <input type="radio" id="task-${count}" name="task" value="task" class="input-radio">
+    <label for="task-${count}">${task}</label>
     <img src="https://img.icons8.com/ios-glyphs/512/multiply.png" class="delete-btn" id="delete-btn">
     </div>
     `;
+    count++;
   }
+  console.log(count);
   incomplete.innerHTML = listItems;
 }
 
@@ -38,3 +41,7 @@ function taskCount() {
   <span class="text-highlight" >${myTasks.length}</span> tasks left
   `;
 }
+
+incomplete.addEventListener('change', function (e) {
+  console.log(e.target.id);
+});
