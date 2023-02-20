@@ -128,11 +128,12 @@ ul {
   margin: 0;
   font-size: 20px;
   gap: 8px;
+
 }
 
 .task-complete{
-  background: #383838;
-  color: whitesmoke;
+  background: #9a9999;
+  color: rgb(227, 224, 224);
   border-radius: 5px;
   margin-bottom: 5px;
 }
@@ -157,4 +158,15 @@ ul {
 
 .border-bottom {
   border-bottom: 1px solid #989898;
+}
+
+.delete{
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  border: 2px solid red;
+  margin: 0 5px 0 auto;
+  border: 1px solid #303030;
+  border-radius: 50%;
+  padding: 3px ;
 }

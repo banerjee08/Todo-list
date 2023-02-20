@@ -10,6 +10,8 @@ const taskCounter = document.getElementById('task-counter');
 // array
 const myTasks = [];
 
+const completedTasks = [];
+
 inputAdd.addEventListener('click', function () {
   myTasks.push(addTask.value);
   addTask.value = '';
@@ -19,7 +21,7 @@ inputAdd.addEventListener('click', function () {
 
 function renderTasks() {
   let listItems = '';
-  
+
   let count = 1;
   for (let task of myTasks) {
     listItems += `
@@ -31,7 +33,6 @@ function renderTasks() {
     `;
     count++;
   }
-  console.log(count);
   incomplete.innerHTML = listItems;
 }
 
@@ -43,5 +44,15 @@ function taskCount() {
 }
 
 incomplete.addEventListener('change', function (e) {
-  console.log(e.target.id);
+  console.log(document.getElementById(e.target.id).checked)
+
+  // task complete highlight
+  document
+    .getElementById(e.target.id)
+    .parentElement.classList.add('task-complete');
+
+  // button highlight
+  // document.getElementById(e.target.id).nextElementSibling.nextElementSibling.classList.add('btn-light');
 });
+
+
