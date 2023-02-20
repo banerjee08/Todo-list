@@ -64,7 +64,7 @@ body {
   margin-left: auto;
 }
 
-.btn-light{
+.btn-light {
   border: 1px solid whitesmoke;
 }
 
@@ -128,14 +128,15 @@ ul {
   margin: 0;
   font-size: 20px;
   gap: 8px;
-
 }
 
-.task-complete{
-  background: #9a9999;
+.task-complete {
+  background: #b0adad;
   color: rgb(227, 224, 224);
   border-radius: 5px;
   margin-bottom: 5px;
+  font-weight: bold;
+  accent-color: #110ca8;
 }
 
 .footer {
@@ -160,7 +161,7 @@ ul {
   border-bottom: 1px solid #989898;
 }
 
-.delete{
+.delete {
   width: 15px;
   height: 15px;
   display: inline-block;
@@ -168,5 +169,5 @@ ul {
   margin: 0 5px 0 auto;
   border: 1px solid #303030;
   border-radius: 50%;
-  padding: 3px ;
+  padding: 3px;
 }

@@ -2,10 +2,10 @@ const inputAdd = document.getElementById('input-add');
 const addTask = document.getElementById('add-task');
 const completeAll = document.getElementById('complete-all');
 const clearCompleted = document.getElementById('clear-completed');
-const deleteBtn = document.getElementById('delete-btn');
 const incomplete = document.getElementById('incomplete');
 const completed = document.getElementById('completed');
 const taskCounter = document.getElementById('task-counter');
+const deleteBtn = document.createElement('delete-btn');
 
 // array
 const myTasks = [];
@@ -44,15 +44,23 @@ function taskCount() {
 }
 
 incomplete.addEventListener('change', function (e) {
-  console.log(document.getElementById(e.target.id).checked)
-
+  // console.log(document.getElementById(e.target.id).checked)
   // task complete highlight
   document
     .getElementById(e.target.id)
     .parentElement.classList.add('task-complete');
 
-  // button highlight
-  // document.getElementById(e.target.id).nextElementSibling.nextElementSibling.classList.add('btn-light');
-});
+  // delete
+  // console.log(document.getElementById(e.target.id).nextElementSibling.nextElementSibling)
+  // console.log(document.getElementById(e.target.id).parentElement)
 
+  // const parent = document.getElementById(e.target.id).parentElement;
+
+  // parent.addEventListener('click', function () {
+  //   console.log('delete')
+  // })
+  deleteBtn.addEventListener('click', function () {
+    console.log('delete')
+  })
+});
 
