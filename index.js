@@ -28,12 +28,18 @@ function renderTasks() {
     <div class="task">
     <input type="radio" id="task-${count}" name="task" value="task" class="input-radio">
     <label for="task-${count}">${task}</label>
-    <img src="https://img.icons8.com/ios-glyphs/512/multiply.png" class="delete-btn" id="delete-btn">
+    <button class="delete-btn" onclick="delTask(${myTasks.indexOf(task)})">X</button>
     </div>
     `;
     count++;
   }
   incomplete.innerHTML = listItems;
+}
+
+function delTask(myTask){
+  myTasks.splice(myTask, 1)
+  console.log(myTasks)
+  renderTasks()
 }
 
 // tasks left
