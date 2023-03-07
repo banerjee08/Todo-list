@@ -19,6 +19,48 @@ body {
   color: black;
 }
 
+/* icons */
+
+.input-icon,
+.input-add {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  align-self: center;
+}
+
+.input-add{
+  cursor: pointer;
+}
+
+.double-tick {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  align-self: center;
+  padding-right: 6px;
+}
+
+/* buttons */
+.delete-btn {
+  border: 1px solid #303030;
+  border-radius: 50%;
+  margin-left: auto;
+}
+
+.btn-light {
+  border: 1px solid whitesmoke;
+}
+
+.action-btns {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body */
 .header {
   margin: 0 auto;
   width: 500px;
@@ -36,52 +78,12 @@ body {
   background-color: DarkGray;
 }
 
-/* icons */
-
-.input-icon,
-.input-add {
-  width: 30px;
-  height: 30px;
-  object-fit: contain;
-  align-self: center;
-}
-
-.double-tick {
-  width: 20px;
-  height: 20px;
-  object-fit: contain;
-  align-self: center;
-}
-
-.delete-btn {
-  /* width: 15px; */
-  /* height: 15px; */
-  /* object-fit: contain; */
-  /* align-self: center; */
-  border: 1px solid #303030;
-  border-radius: 50%;
-  /* padding: 3px; */
-  margin-left: auto;
-}
-
-.btn-light {
-  border: 1px solid whitesmoke;
-}
-
-/* hide the add button */
-/* .input-add:disabled{
-    
-} */
-
-.double-tick {
-  padding-right: 6px;
-}
-
 .add-task {
   width: 380px;
   height: 30px;
   border: none;
   background-color: Gainsboro;
+  cursor: pointer;
 }
 
 .add-task:hover {
@@ -93,20 +95,6 @@ body {
   padding: 10px 15px;
 }
 
-.action-btns {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-/* .action-btns:hover,
-.action-btns:active {
-  color: #383838;
-} */
-
-/* list styling */
 li {
   list-style-type: none;
 }
@@ -115,8 +103,7 @@ ul {
   padding: 0;
 }
 
-.incomplete,
-.completed {
+.incomplete{
   display: flex;
   flex-direction: column;
   padding: 5px 10px;
@@ -159,15 +146,4 @@ ul {
 
 .border-bottom {
   border-bottom: 1px solid #989898;
-}
-
-.delete {
-  width: 15px;
-  height: 15px;
-  display: inline-block;
-  border: 2px solid red;
-  margin: 0 5px 0 auto;
-  border: 1px solid #303030;
-  border-radius: 50%;
-  padding: 3px;
 }

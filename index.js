@@ -1,17 +1,12 @@
 const inputAdd = document.getElementById('input-add');
 const addTask = document.getElementById('add-task');
-const completeAll = document.getElementById('complete-all');
-const clearCompleted = document.getElementById('clear-completed');
 const incomplete = document.getElementById('incomplete');
-const completed = document.getElementById('completed');
 const taskCounter = document.getElementById('task-counter');
-const deleteBtn = document.createElement('delete-btn');
 
 // array
 const myTasks = [];
 
-const completedTasks = [];
-
+// Pushing Tasks in the array via eventlistner
 inputAdd.addEventListener('click', function () {
   myTasks.push(addTask.value);
   addTask.value = '';
@@ -19,9 +14,9 @@ inputAdd.addEventListener('click', function () {
   taskCount();
 });
 
+// Rendering Tasks dynamically
 function renderTasks() {
   let listItems = '';
-
   let count = 1;
   for (let task of myTasks) {
     listItems += `
@@ -36,37 +31,24 @@ function renderTasks() {
   incomplete.innerHTML = listItems;
 }
 
+// Deleting a task from the list
 function delTask(myTask){
   myTasks.splice(myTask, 1)
-  console.log(myTasks)
+  taskCount();
   renderTasks()
 }
 
-// tasks left
+ // highlighting task
+incomplete.addEventListener('change', function (e) {
+  document
+    .getElementById(e.target.id)
+    .parentElement.classList.add('task-complete');
+  
+});
+
+// Task Counter
 function taskCount() {
   taskCounter.innerHTML = `
   <span class="text-highlight" >${myTasks.length}</span> tasks left
   `;
 }
-
-incomplete.addEventListener('change', function (e) {
-  // console.log(document.getElementById(e.target.id).checked)
-  // task complete highlight
-  document
-    .getElementById(e.target.id)
-    .parentElement.classList.add('task-complete');
-
-  // delete
-  // console.log(document.getElementById(e.target.id).nextElementSibling.nextElementSibling)
-  // console.log(document.getElementById(e.target.id).parentElement)
-
-  // const parent = document.getElementById(e.target.id).parentElement;
-
-  // parent.addEventListener('click', function () {
-  //   console.log('delete')
-  // })
-  deleteBtn.addEventListener('click', function () {
-    console.log('delete')
-  })
-});
-

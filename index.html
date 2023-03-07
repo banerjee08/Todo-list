@@ -14,6 +14,7 @@
 
 <body>
     <section class="header">
+        <!-- Accepting task from the user -->
         <div class="input-action">
             <img src="https://cdn-icons-png.flaticon.com/512/3031/3031267.png" id="input-icon" class="input-icon">
             <form>
@@ -32,29 +33,15 @@
     </section>
 
     <section class="main">
-        <div class="incomplete border-bottom" id="incomplete">
-        <!-- <div class="task">
-            <input type="radio" id="task-${count}" name="task" value="task" class="input-radio">
-            <label for="task-${count}">${task}</label>
-            <button class="delete-btn" onclick="delTask(${myTasks.indexOf(task)})">X</button>
-        </div> -->
-            <!-- <div class="task">
-                <input type="radio" id="task" name="task" value="task" class="input-radio">
-                <label>Learn how to use vue.</label>
-                <img src="https://img.icons8.com/ios-glyphs/512/multiply.png" class="delete-btn" id="delete-btn">
-            </div>
-            <div class="task">
-                <input type="radio" id="task" name="task" value="task" class="input-radio">
-                <label>Learn how to use vue.</label>
-                <img src="https://img.icons8.com/ios-glyphs/512/multiply.png" class="delete-btn" id="delete-btn">
-            </div> -->
-
-        </div>
+        <!-- List of Tasks -->
+        <div class="incomplete border-bottom" id="incomplete"></div>
     </section>
 
     <section class="footer text-light">
+        <!-- Number of Tasks left -->
         <div class="task-counter" id="task-counter"></div>
-        <!-- <div class="task-counter" id="task-counter"><span class="text-highlight" >3</span> tasks left</div> -->
+
+        <!-- Task status -->
         <div class="status">
             <ul class="task-status">
                 <li class="text-highlight">All</li>
@@ -64,6 +51,7 @@
         </div>
     </section>
 
+    <!-- Linking Javascript -->
     <script src="./index.js"></script>
 </body>
 
