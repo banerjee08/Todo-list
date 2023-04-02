@@ -23,7 +23,9 @@ function renderTasks() {
     <div class="task">
     <input type="radio" id="task-${count}" name="task" value="task" class="input-radio">
     <label for="task-${count}">${task}</label>
-    <button class="delete-btn" onclick="delTask(${myTasks.indexOf(task)})">X</button>
+    <button class="delete-btn" onclick="delTask(${myTasks.indexOf(
+      task
+    )})">X</button>
     </div>
     `;
     count++;
@@ -32,23 +34,27 @@ function renderTasks() {
 }
 
 // Deleting a task from the list
-function delTask(myTask){
-  myTasks.splice(myTask, 1)
+function delTask(myTask) {
+  myTasks.splice(myTask, 1);
   taskCount();
-  renderTasks()
+  renderTasks();
 }
 
- // highlighting task
+// highlighting task
 incomplete.addEventListener('change', function (e) {
   document
     .getElementById(e.target.id)
     .parentElement.classList.add('task-complete');
-  
+  taskCount();
 });
 
 // Task Counter
 function taskCount() {
+  const completedTasks = 
+    document.getElementsByClassName('task-complete').length;
+  
+  console.log(completedTasks);
   taskCounter.innerHTML = `
-  <span class="text-highlight" >${myTasks.length}</span> tasks left
+  <span class="text-highlight" >${myTasks.length - completedTasks}</span> tasks left
   `;
 }
